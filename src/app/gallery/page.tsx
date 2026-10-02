@@ -24,13 +24,13 @@ export default function GalleryPage() {
           image={{
             src: "/images/heroes/atmosphere-beauty.jpg",
             alt: "Elegant updo finished at a softly lit salon vanity",
-            width: 1280,
-            height: 720,
-            focalX: 0.42,
-            focalY: 0.45,
+            width: 1920,
+            height: 512,
+            focalX: 0.68,
+            focalY: 0.48,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.15, t: 0.1, r: 0.85, b: 0.95 },
+            subject: { l: 0.4, t: 0.05, r: 0.98, b: 0.98 },
           }}
           actions={
             <Button

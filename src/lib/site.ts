@@ -71,8 +71,8 @@ export const services = [
       "It all starts with the cut. Master stylists start at $100; prices vary by stylist. Call for a complimentary consultation.",
     image: "/images/heroes/home-beauty.jpg",
     imageAlt: "Classically finished waves after a precision cut and style",
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 512,
   },
   {
     slug: "color",
@@ -83,8 +83,8 @@ export const services = [
       "Partial highlight $140-$165, full highlight $165-$175, mini color (partline and hairline only) $35, mini color with blow dry $65-$69. Estimates only - visit or call for an exact quote.",
     image: "/images/heroes/services-beauty.jpg",
     imageAlt: "Luminous dimensional blonde color with a polished blowout",
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 512,
   },
   {
     slug: "keratin",
@@ -95,8 +95,8 @@ export const services = [
       "Results typically last about 3 months depending on hair type. Gentle keratin protein, no harsh fumes, suitable for colored and chemically processed hair. Consultation and deposit required; about a 3-hour process. Starting at $300.",
     image: "/images/heroes/finish-beauty.jpg",
     imageAlt: "Silk-smooth finished hair with a high-gloss polish",
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 512,
   },
   {
     slug: "nails-gallery",
@@ -107,8 +107,8 @@ export const services = [
       "We take pride in a clean, comfortable space for our community - and in supporting local makers alongside your beauty services.",
     image: "/images/heroes/atmosphere-beauty.jpg",
     imageAlt: "Elevated salon vanity with a finished updo",
-    width: 1280,
-    height: 720,
+    width: 1920,
+    height: 512,
   },
 ] as const;
 

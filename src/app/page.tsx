@@ -27,11 +27,13 @@ export default function HomePage() {
           image={{
             src: "/images/heroes/home-beauty.jpg",
             alt: "Woman with glossy, classically styled waves - the finished salon look",
-            width: 1280,
-            height: 720,
-            focalX: 0.52,
-            focalY: 0.42,
-            subject: { l: 0.28, t: 0.08, r: 0.92, b: 0.98 },
+            width: 1920,
+            height: 512,
+            focalX: 0.78,
+            focalY: 0.48,
+            fillFrame: true,
+            bleed: true,
+            subject: { l: 0.55, t: 0.05, r: 0.98, b: 0.98 },
           }}
           actions={
             <>

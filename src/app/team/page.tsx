@@ -24,13 +24,13 @@ export default function TeamPage() {
           image={{
             src: "/images/heroes/home-beauty.jpg",
             alt: "Polished waves that show the caliber of finish our stylists create",
-            width: 1280,
-            height: 720,
-            focalX: 0.52,
-            focalY: 0.4,
+            width: 1920,
+            height: 512,
+            focalX: 0.78,
+            focalY: 0.48,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.3, t: 0.05, r: 0.9, b: 0.9 },
+            subject: { l: 0.55, t: 0.05, r: 0.98, b: 0.98 },
           }}
           actions={
             <Button

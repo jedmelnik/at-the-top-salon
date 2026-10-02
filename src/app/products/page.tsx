@@ -24,13 +24,13 @@ export default function ProductsPage() {
           image={{
             src: "/images/heroes/finish-beauty.jpg",
             alt: "Silky finished hair receiving a final brush",
-            width: 1280,
-            height: 720,
-            focalX: 0.55,
-            focalY: 0.48,
+            width: 1920,
+            height: 512,
+            focalX: 0.7,
+            focalY: 0.5,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.2, t: 0.15, r: 0.95, b: 0.9 },
+            subject: { l: 0.4, t: 0.05, r: 0.98, b: 0.98 },
           }}
           actions={
             <Button

@@ -24,13 +24,13 @@ export default function ContactPage() {
           image={{
             src: "/images/heroes/atmosphere-beauty.jpg",
             alt: "Quietly glamorous salon vanity ready for your appointment",
-            width: 1280,
-            height: 720,
-            focalX: 0.48,
-            focalY: 0.42,
+            width: 1920,
+            height: 512,
+            focalX: 0.68,
+            focalY: 0.48,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.18, t: 0.08, r: 0.9, b: 0.92 },
+            subject: { l: 0.4, t: 0.05, r: 0.98, b: 0.98 },
           }}
           actions={
             <Button

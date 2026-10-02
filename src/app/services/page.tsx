@@ -24,13 +24,13 @@ export default function ServicesPage() {
           image={{
             src: "/images/heroes/services-beauty.jpg",
             alt: "Woman with luminous blonde waves after professional styling",
-            width: 1280,
-            height: 720,
-            focalX: 0.55,
-            focalY: 0.4,
+            width: 1920,
+            height: 512,
+            focalX: 0.72,
+            focalY: 0.45,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.3, t: 0.05, r: 0.95, b: 0.95 },
+            subject: { l: 0.45, t: 0.02, r: 0.98, b: 0.98 },
           }}
           actions={
             <Button
