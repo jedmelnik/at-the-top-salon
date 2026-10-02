@@ -1,0 +1,191 @@
+"use client";
+
+import { useEffect, useId, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { navLinks, site } from "@/lib/site";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+
+type SiteHeaderProps = {
+  variant?: "overlay" | "solid";
+};
+
+export function SiteHeader({ variant = "overlay" }: SiteHeaderProps) {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuId = useId();
+  const forceSolid = variant === "solid";
+  const solid = forceSolid || scrolled || menuOpen;
+
+  useEffect(() => {
+    if (forceSolid) return;
+
+    const onScroll = () => {
+      setScrolled(window.scrollY > 48);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [forceSolid]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    const onResize = () => {
+      if (window.matchMedia("(min-width: 1024px)").matches) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("keydown", onKeyDown);
+    window.addEventListener("resize", onResize);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("resize", onResize);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [menuOpen]);
+
+  return (
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-300 ease-out",
+        solid
+          ? "border-b border-border/70 bg-[#f4f7f2]/95 shadow-[0_8px_24px_rgba(26,46,34,0.08)] backdrop-blur-md"
+          : "border-b border-transparent bg-transparent",
+      )}
+    >
+      <div className="site-wrap flex items-center justify-between gap-3 py-3 md:gap-4 md:py-4">
+        <Link
+          href="/"
+          className="relative flex shrink-0 items-center"
+          onClick={() => setMenuOpen(false)}
+        >
+          <Image
+            src="/images/logo.png"
+            alt={site.name}
+            width={516}
+            height={298}
+            priority
+            className={cn(
+              "h-12 w-auto sm:h-14 md:h-[3.75rem]",
+              solid ? "" : "brightness-0 invert",
+            )}
+          />
+        </Link>
+
+        <div className="flex items-center gap-2 sm:gap-3">
+          <nav
+            className="hidden items-center gap-1 lg:flex xl:gap-2"
+            aria-label="Primary"
+          >
+            {navLinks.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className={cn(
+                  "rounded-md px-2 py-1.5 text-[0.8rem] font-medium transition-colors xl:px-2.5 xl:text-sm",
+                  solid
+                    ? "text-ink/80 hover:bg-accent hover:text-ink"
+                    : "text-white/90 hover:bg-white/10 hover:text-white",
+                )}
+              >
+                {label}
+              </Link>
+            ))}
+          </nav>
+
+          <Button
+            nativeButton={false}
+            render={<a href={site.bookingUrl} target="_blank" rel="noopener noreferrer" />}
+            size="sm"
+            className={cn(
+              "hidden h-9 rounded-md px-3 text-sm font-semibold shadow-none sm:inline-flex",
+              solid
+                ? "bg-sage text-white hover:bg-sage/90"
+                : "bg-leaf text-ink hover:bg-leaf/90",
+            )}
+          >
+            Book
+          </Button>
+
+          <Button
+            nativeButton={false}
+            render={<a href={site.phoneHref} />}
+            size="sm"
+            variant="outline"
+            className={cn(
+              "hidden h-9 rounded-md px-3 text-sm font-semibold md:inline-flex",
+              solid
+                ? "border-border bg-transparent text-ink hover:bg-accent"
+                : "border-white/40 bg-transparent text-white hover:bg-white/10 hover:text-white",
+            )}
+          >
+            Call
+          </Button>
+
+          <button
+            type="button"
+            className={cn(
+              "inline-flex size-10 items-center justify-center rounded-md lg:hidden",
+              solid
+                ? "text-ink hover:bg-accent"
+                : "text-white hover:bg-white/10",
+            )}
+            aria-expanded={menuOpen}
+            aria-controls={menuId}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMenuOpen((open) => !open)}
+          >
+            {menuOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
+        </div>
+      </div>
+
+      {menuOpen ? (
+        <div
+          id={menuId}
+          className="border-t border-border/70 bg-[#f4f7f2] lg:hidden"
+        >
+          <nav className="site-wrap flex flex-col gap-1 py-4" aria-label="Mobile">
+            {navLinks.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className="rounded-md px-3 py-3 text-base font-medium text-ink hover:bg-accent"
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </Link>
+            ))}
+            <a
+              href={site.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 rounded-md bg-sage px-3 py-3 text-center text-base font-semibold text-white"
+              onClick={() => setMenuOpen(false)}
+            >
+              {site.bookingLabel}
+            </a>
+            <a
+              href={site.phoneHref}
+              className="rounded-md px-3 py-3 text-center text-base font-semibold text-ink ring-1 ring-border"
+              onClick={() => setMenuOpen(false)}
+            >
+              Call {site.phone}
+            </a>
+          </nav>
+        </div>
+      ) : null}
+    </header>
+  );
+}
