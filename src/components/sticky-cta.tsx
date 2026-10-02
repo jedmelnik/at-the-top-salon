@@ -9,7 +9,7 @@ export function StickyCta() {
           href={site.bookingUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-11 flex-1 items-center justify-center rounded-md bg-sage text-sm font-semibold text-white"
+          className="flex h-11 flex-1 items-center justify-center rounded-md bg-champagne text-sm font-semibold text-ink"
         >
           Book
         </a>

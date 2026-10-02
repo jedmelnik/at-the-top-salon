@@ -3,7 +3,7 @@ export const site = {
   shortName: "At The Top Salon",
   tagline: "Gallery / Salon in Mill Valley",
   description:
-    "Find yourself at At The Top Salon - expert cuts, color, and keratin smoothing in a relaxed Mill Valley space that also showcases local art.",
+    "Look beautiful and classy at At The Top Salon - expert cuts, luminous color, and finishing in a Mill Valley gallery / salon.",
   phone: "(415) 381-3707",
   phoneHref: "tel:+14153813707",
   email: "info@atthetopsalon.com",
@@ -69,10 +69,10 @@ export const services = [
       "Creative, progressive cuts that reflect your individuality - from precision shapes to soft, lived-in styles.",
     detail:
       "It all starts with the cut. Master stylists start at $100; prices vary by stylist. Call for a complimentary consultation.",
-    image: "/images/heroes/the-cut.jpg",
-    imageAlt: "Fresh layered haircut finished at the salon",
-    width: 768,
-    height: 1024,
+    image: "/images/heroes/home-beauty.jpg",
+    imageAlt: "Classically finished waves after a precision cut and style",
+    width: 1280,
+    height: 720,
   },
   {
     slug: "color",
@@ -81,10 +81,10 @@ export const services = [
       "Highlights, lowlights, mini color, and corrective work tuned to your features and hair history.",
     detail:
       "Partial highlight $140-$165, full highlight $165-$175, mini color (partline and hairline only) $35, mini color with blow dry $65-$69. Estimates only - visit or call for an exact quote.",
-    image: "/images/heroes/the-braid.jpg",
-    imageAlt: "Braided hairstyle showing dimensional color",
-    width: 768,
-    height: 1024,
+    image: "/images/heroes/services-beauty.jpg",
+    imageAlt: "Luminous dimensional blonde color with a polished blowout",
+    width: 1280,
+    height: 720,
   },
   {
     slug: "keratin",
@@ -93,10 +93,10 @@ export const services = [
       "Keratin Complex Hair Therapy by Coppola - certified smoothing that reduces frizz and curl while restoring shine.",
     detail:
       "Results typically last about 3 months depending on hair type. Gentle keratin protein, no harsh fumes, suitable for colored and chemically processed hair. Consultation and deposit required; about a 3-hour process. Starting at $300.",
-    image: "/images/products/keratin.jpeg",
-    imageAlt: "Keratin Complex product bottles",
-    width: 650,
-    height: 433,
+    image: "/images/heroes/finish-beauty.jpg",
+    imageAlt: "Silk-smooth finished hair with a high-gloss polish",
+    width: 1280,
+    height: 720,
   },
   {
     slug: "nails-gallery",
@@ -105,10 +105,10 @@ export const services = [
       "A full-service salon with manicures and pedicures, fine jewelry, and a rotating showcase of Mill Valley artists.",
     detail:
       "We take pride in a clean, comfortable space for our community - and in supporting local makers alongside your beauty services.",
-    image: "/images/heroes/interior.png",
-    imageAlt: "Interior view of At The Top Salon",
-    width: 594,
-    height: 288,
+    image: "/images/heroes/atmosphere-beauty.jpg",
+    imageAlt: "Elevated salon vanity with a finished updo",
+    width: 1280,
+    height: 720,
   },
 ] as const;
 

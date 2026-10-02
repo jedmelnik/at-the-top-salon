@@ -19,18 +19,18 @@ export default function GalleryPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Salon tour & hair gallery"
-          lede="A look at the space, the finishes, and the work that happens upstairs on East Blithedale."
-          // Focal: entrance walkway / sign area
+          lede="Finished styles and a quietly glamorous room - beauty you can picture yourself wearing."
+          // Focal: elegant updo / vanity glow
           image={{
-            src: "/images/heroes/walkway.jpg",
-            alt: "Walkway and signage at At The Top Salon",
-            width: 1020,
-            height: 750,
-            focalX: 0.55,
-            focalY: 0.42,
+            src: "/images/heroes/atmosphere-beauty.jpg",
+            alt: "Elegant updo finished at a softly lit salon vanity",
+            width: 1280,
+            height: 720,
+            focalX: 0.42,
+            focalY: 0.45,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.2, t: 0.15, r: 0.95, b: 0.85 },
+            subject: { l: 0.15, t: 0.1, r: 0.85, b: 0.95 },
           }}
           actions={
             <Button
@@ -43,7 +43,7 @@ export default function GalleryPage() {
                 />
               }
               size="lg"
-              className="h-11 rounded-md bg-leaf px-5 text-sm font-semibold text-ink hover:bg-leaf/90"
+              className="h-11 rounded-md bg-champagne px-5 text-sm font-semibold text-ink hover:bg-champagne/90"
             >
               {site.bookingLabel}
             </Button>

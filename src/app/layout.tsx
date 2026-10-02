@@ -17,7 +17,7 @@ const body = Outfit({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} | Mill Valley Hair Salon & Gallery`,
+    default: `${site.name} | Beautiful & Classy Hair in Mill Valley`,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,

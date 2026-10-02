@@ -19,18 +19,18 @@ export default function TeamPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Our team"
-          lede="Experienced stylists with deep roots in Mill Valley - book the artist who fits your look."
-          // Focal: Jimmy and guest faces
+          lede="Artists who specialize in beautiful, classy results - book the stylist who fits your look."
+          // Focal: finished beauty look (result-led); people bios below
           image={{
-            src: "/images/heroes/home-hero.png",
-            alt: "Jimmy O'Keefe with a guest at At The Top Salon",
-            width: 1017,
-            height: 773,
-            focalX: 0.48,
-            focalY: 0.36,
+            src: "/images/heroes/home-beauty.jpg",
+            alt: "Polished waves that show the caliber of finish our stylists create",
+            width: 1280,
+            height: 720,
+            focalX: 0.52,
+            focalY: 0.4,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.25, t: 0.1, r: 0.9, b: 0.75 },
+            subject: { l: 0.3, t: 0.05, r: 0.9, b: 0.9 },
           }}
           actions={
             <Button
@@ -43,7 +43,7 @@ export default function TeamPage() {
                 />
               }
               size="lg"
-              className="h-11 rounded-md bg-leaf px-5 text-sm font-semibold text-ink hover:bg-leaf/90"
+              className="h-11 rounded-md bg-champagne px-5 text-sm font-semibold text-ink hover:bg-champagne/90"
             >
               {site.bookingLabel}
             </Button>

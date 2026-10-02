@@ -19,18 +19,18 @@ export default function ContactPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Contact"
-          lede="Book online, call the salon, or send a note - we are on East Blithedale in Mill Valley."
-          // Focal: exterior salon sign
+          lede="Book the appointment that gets you looking beautiful and classy - we are on East Blithedale in Mill Valley."
+          // Focal: vanity / updo atmosphere
           image={{
-            src: "/images/heroes/exterior.jpg",
-            alt: "Exterior hanging sign for At The Top Salon",
-            width: 1360,
-            height: 1020,
-            focalX: 0.42,
-            focalY: 0.48,
+            src: "/images/heroes/atmosphere-beauty.jpg",
+            alt: "Quietly glamorous salon vanity ready for your appointment",
+            width: 1280,
+            height: 720,
+            focalX: 0.48,
+            focalY: 0.42,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.2, t: 0.2, r: 0.75, b: 0.85 },
+            subject: { l: 0.18, t: 0.08, r: 0.9, b: 0.92 },
           }}
           actions={
             <Button
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 />
               }
               size="lg"
-              className="h-11 rounded-md bg-leaf px-5 text-sm font-semibold text-ink hover:bg-leaf/90"
+              className="h-11 rounded-md bg-champagne px-5 text-sm font-semibold text-ink hover:bg-champagne/90"
             >
               {site.bookingLabel}
             </Button>
@@ -55,7 +55,7 @@ export default function ContactPage() {
             <h2 className="font-display text-3xl tracking-tight text-ink">
               Visit the salon
             </h2>
-            <div className="mt-3 h-[2px] w-14 bg-sage" />
+            <div className="mt-3 h-[2px] w-14 bg-champagne" />
             <dl className="mt-6 space-y-5 text-base">
               <div>
                 <dt className="text-xs font-semibold uppercase tracking-[0.16em] text-sage">
@@ -134,7 +134,7 @@ export default function ContactPage() {
             <h2 className="font-display text-3xl tracking-tight text-ink">
               Send a message
             </h2>
-            <div className="mt-3 h-[2px] w-14 bg-sage" />
+            <div className="mt-3 h-[2px] w-14 bg-champagne" />
             <p className="mt-4 text-base leading-relaxed text-foreground/75">
               Prefer email? Share a few details and we will follow up. For the
               fastest booking, use the online scheduler.

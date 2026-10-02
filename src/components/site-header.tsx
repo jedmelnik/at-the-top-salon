@@ -111,8 +111,8 @@ export function SiteHeader({ variant = "overlay" }: SiteHeaderProps) {
             className={cn(
               "hidden h-9 rounded-md px-3 text-sm font-semibold shadow-none sm:inline-flex",
               solid
-                ? "bg-sage text-white hover:bg-sage/90"
-                : "bg-leaf text-ink hover:bg-leaf/90",
+                ? "bg-champagne text-ink hover:bg-champagne/90"
+                : "bg-champagne text-ink hover:bg-champagne/90",
             )}
           >
             Book
@@ -171,7 +171,7 @@ export function SiteHeader({ variant = "overlay" }: SiteHeaderProps) {
               href={site.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 rounded-md bg-sage px-3 py-3 text-center text-base font-semibold text-white"
+              className="mt-2 rounded-md bg-champagne px-3 py-3 text-center text-base font-semibold text-ink"
               onClick={() => setMenuOpen(false)}
             >
               {site.bookingLabel}

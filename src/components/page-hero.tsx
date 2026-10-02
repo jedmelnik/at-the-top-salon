@@ -25,7 +25,7 @@ type Props = {
 };
 
 /** Brand fill beyond the capped media plane (website-banners). */
-export const HERO_FILL = "#1a2e22";
+export const HERO_FILL = "#1a1614";
 
 export function PageHero({
   kicker,
@@ -60,17 +60,17 @@ export function PageHero({
         <div
           className={`absolute inset-0 hidden bg-gradient-to-r lg:block ${
             image.bleed
-              ? "from-[#1a2e22] from-0% via-[#1a2e22]/88 via-[28%] to-transparent to-[50%]"
-              : "from-[#1a2e22] from-0% via-[#1a2e22]/90 via-[24%] to-transparent to-[48%]"
+              ? "from-[#1a1614] from-0% via-[#1a1614]/88 via-[28%] to-transparent to-[50%]"
+              : "from-[#1a1614] from-0% via-[#1a1614]/90 via-[24%] to-transparent to-[48%]"
           }`}
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-[#1a2e22]/55 lg:hidden"
+          className="absolute inset-0 bg-[#1a1614]/55 lg:hidden"
           aria-hidden
         />
         <div
-          className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a2e22]/45 to-transparent"
+          className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#1a1614]/45 to-transparent"
           aria-hidden
         />
       </div>
@@ -102,7 +102,7 @@ export function PageHero({
             {title}
           </h1>
           <div
-            className={`h-[3px] w-20 bg-leaf md:w-24 ${home ? "mt-3" : "mt-2.5"}`}
+            className={`h-[3px] w-20 bg-champagne md:w-24 ${home ? "mt-3" : "mt-2.5"}`}
           />
           {lede ? (
             <p

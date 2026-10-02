@@ -56,7 +56,7 @@ export function FocalBanner({
   targetY = 0.62,
   subject,
   fillFrame = false,
-  edgeColor = "#1a2e22",
+  edgeColor = "#1a1614",
 }: Props) {
   const frameRef = useRef<HTMLDivElement>(null);
   const [box, setBox] = useState<Box | null>(null);

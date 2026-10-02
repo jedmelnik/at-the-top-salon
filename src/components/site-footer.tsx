@@ -25,8 +25,8 @@ export function SiteFooter() {
               Find yourself at The Top
             </p>
             <p className="mt-3 text-base leading-relaxed text-white/70">
-              Expert stylists, a relaxed feel-good space, and local art - book
-              online or call to visit {site.serviceArea}.
+              Beautiful, classy finishes from expert stylists - book online or
+              call to visit {site.serviceArea}.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row lg:shrink-0 lg:pb-1">
@@ -40,7 +40,7 @@ export function SiteFooter() {
                 />
               }
               size="lg"
-              className="h-12 w-full rounded-md bg-leaf px-6 text-base font-semibold text-ink hover:bg-leaf/90 sm:w-auto"
+              className="h-12 w-full rounded-md bg-champagne px-6 text-base font-semibold text-ink hover:bg-champagne/90 sm:w-auto"
             >
               {site.bookingLabel}
             </Button>

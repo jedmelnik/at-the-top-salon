@@ -16,22 +16,22 @@ export default function HomePage() {
           kicker="Mill Valley · Gallery / Salon"
           title={
             <>
-              At The Top
+              Beautiful hair,
               <br />
-              Salon
+              classically finished
             </>
           }
-          lede="Discover a new style or celebrate your own timeless beauty with expert stylists in a relaxed, feel-good space."
+          lede="Discover a polished new look - or refine the timeless beauty you already love - with expert stylists who make you feel camera-ready and completely yourself."
           ledeOnMobile
-          // Focal: faces of stylist and guest (center of the pair)
+          // Focal: eyes / face center; hair volume fills subject box
           image={{
-            src: "/images/heroes/home-hero.png",
-            alt: "Stylist and guest smiling inside At The Top Salon",
-            width: 1017,
-            height: 773,
-            focalX: 0.48,
-            focalY: 0.38,
-            subject: { l: 0.22, t: 0.12, r: 0.92, b: 0.95 },
+            src: "/images/heroes/home-beauty.jpg",
+            alt: "Woman with glossy, classically styled waves - the finished salon look",
+            width: 1280,
+            height: 720,
+            focalX: 0.52,
+            focalY: 0.42,
+            subject: { l: 0.28, t: 0.08, r: 0.92, b: 0.98 },
           }}
           actions={
             <>
@@ -45,7 +45,7 @@ export default function HomePage() {
                   />
                 }
                 size="lg"
-                className="h-11 rounded-md bg-leaf px-5 text-sm font-semibold text-ink shadow-none transition-transform hover:bg-leaf/90 hover:scale-[1.02] active:scale-[0.99] md:h-12 md:px-6 md:text-base"
+                className="h-11 rounded-md bg-champagne px-5 text-sm font-semibold text-ink shadow-none transition-transform hover:bg-champagne/90 hover:scale-[1.02] active:scale-[0.99] md:h-12 md:px-6 md:text-base"
               >
                 {site.bookingLabel}
               </Button>
@@ -68,18 +68,18 @@ export default function HomePage() {
               Welcome
             </p>
             <h2 className="mt-3 font-display text-3xl tracking-tight text-ink md:text-4xl">
-              Find yourself at The Top
+              Leave looking your most elegant
             </h2>
             <p className="mt-5 text-base leading-relaxed text-foreground/80 md:text-lg">
-              A full-service Mill Valley salon for haircuts, color, highlights,
-              lowlights, corrective color, manicures, and pedicures. We carry
-              fine jewelry and premier product lines, and we showcase local
-              artists who support this community.
+              At The Top Salon is a Mill Valley gallery / salon for cuts, color,
+              highlights, smoothing, and finishing that read as beautiful and
+              classy - never overdone. Fine jewelry, premier product lines, and
+              local art frame a space that feels elevated and personal.
             </p>
             <p className="mt-4 hidden text-base leading-relaxed text-foreground/80 md:block md:text-lg">
-              Every visit should leave you confident, refreshed, and completely
-              you - with music that feels right and a vibe that stays
-              effortlessly uplifting.
+              Every visit should leave you confident, refreshed, and ready to
+              be seen - with hair that looks as considered as the rest of your
+              style.
             </p>
           </div>
         </section>
@@ -91,11 +91,11 @@ export default function HomePage() {
                 Services
               </p>
               <h2 className="mt-3 font-display text-3xl tracking-tight text-ink md:text-4xl">
-                Cuts, color, and smoothing
+                Craft that shows in the mirror
               </h2>
               <p className="mt-4 text-base leading-relaxed text-foreground/75 md:text-lg">
-                Set your standard with creative, progressive stylists - pricing
-                estimates on our services page, exact quotes in the salon.
+                Precision cuts, luminous color, and keratin smoothing - shaped
+                for a polished result you can wear anywhere.
               </p>
             </div>
 
@@ -140,8 +140,8 @@ export default function HomePage() {
         <section className="site-wrap grid items-center gap-10 py-14 md:grid-cols-2 md:py-20">
           <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
             <Image
-              src="/images/heroes/walkway.jpg"
-              alt="Walkway entrance to At The Top Salon in Mill Valley"
+              src="/images/heroes/finish-beauty.jpg"
+              alt="Glossy finished hair receiving a final polish at the salon"
               fill
               className="object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -149,14 +149,15 @@ export default function HomePage() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sage">
-              Visit
+              The finish
             </p>
             <h2 className="mt-3 font-display text-3xl tracking-tight text-ink md:text-4xl">
-              On East Blithedale in Mill Valley
+              Soft shine. Clean lines. Quiet luxury.
             </h2>
             <p className="mt-4 text-base leading-relaxed text-foreground/80 md:text-lg">
-              {site.address.full}. Call {site.phone} or book online through our
-              scheduling system.
+              Visit us at {site.address.full}. Book online or call {site.phone}
+              - then settle into a space kept clean, calm, and ready for your
+              best look.
             </p>
             <ul className="mt-6 space-y-4">
               {wellnessNotes.map((note) => (
@@ -193,22 +194,22 @@ export default function HomePage() {
         <section className="border-t border-border/70 bg-ink py-14 text-white md:py-20">
           <div className="site-wrap grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-leaf/90">
-                Salon tour
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-champagne/90">
+                Gallery
               </p>
               <h2 className="mt-3 font-display text-3xl tracking-tight md:text-4xl">
-                Come take a look inside
+                Looks worth dressing up for
               </h2>
               <p className="mt-4 max-w-xl text-base leading-relaxed text-white/75 md:text-lg">
-                Browse the gallery for hair finishes and salon spaces, or watch
-                a quick video tour before you book.
+                Browse finished styles and the salon atmosphere - then book the
+                appointment that gets you there.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button
                   nativeButton={false}
                   render={<Link href="/gallery" />}
                   size="lg"
-                  className="h-11 rounded-md bg-leaf px-6 font-semibold text-ink hover:bg-leaf/90"
+                  className="h-11 rounded-md bg-champagne px-6 font-semibold text-ink hover:bg-champagne/90"
                 >
                   View gallery
                 </Button>

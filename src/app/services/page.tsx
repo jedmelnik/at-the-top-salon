@@ -19,18 +19,18 @@ export default function ServicesPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Services"
-          lede="Estimates for featured services - call or visit for an exact quote and complimentary consultation."
-          // Focal: hair texture / orchid near the face
+          lede="Cuts, color, and smoothing designed for a beautiful, classy finish - call for an exact quote."
+          // Focal: eyes / luminous blonde waves
           image={{
-            src: "/images/heroes/services.jpg",
-            alt: "Woman with flowing hair resting on grass with orchids",
-            width: 1000,
-            height: 662,
-            focalX: 0.62,
-            focalY: 0.42,
+            src: "/images/heroes/services-beauty.jpg",
+            alt: "Woman with luminous blonde waves after professional styling",
+            width: 1280,
+            height: 720,
+            focalX: 0.55,
+            focalY: 0.4,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.28, t: 0.15, r: 0.98, b: 0.85 },
+            subject: { l: 0.3, t: 0.05, r: 0.95, b: 0.95 },
           }}
           actions={
             <Button
@@ -43,7 +43,7 @@ export default function ServicesPage() {
                 />
               }
               size="lg"
-              className="h-11 rounded-md bg-leaf px-5 text-sm font-semibold text-ink hover:bg-leaf/90"
+              className="h-11 rounded-md bg-champagne px-5 text-sm font-semibold text-ink hover:bg-champagne/90"
             >
               {site.bookingLabel}
             </Button>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
                   <h2 className="font-display text-3xl tracking-tight text-ink">
                     {service.title}
                   </h2>
-                  <div className="mt-3 h-[2px] w-14 bg-sage" />
+                  <div className="mt-3 h-[2px] w-14 bg-champagne" />
                   <p className="mt-4 text-base leading-relaxed text-foreground/80">
                     {service.summary}
                   </p>

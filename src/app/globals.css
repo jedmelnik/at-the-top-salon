@@ -45,7 +45,7 @@
   --color-brand-foreground: var(--brand-foreground);
   --color-ink: var(--ink);
   --color-sage: var(--sage);
-  --color-leaf: var(--leaf);
+  --color-champagne: var(--champagne);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -56,44 +56,44 @@
 }
 
 :root {
-  /* Mill Valley salon - cool sage paper + deep forest + leaf accent */
-  --background: #e9efe8;
-  --foreground: #1c2a20;
-  --ink: #1a2e22;
-  --sage: #4a8f43;
-  --leaf: #6aad62;
-  --brand: #4a8f43;
+  /* Beautiful + classy: espresso ink, cool ivory, champagne gold, muted logo sage */
+  --background: #f1efeb;
+  --foreground: #1a1614;
+  --ink: #1a1614;
+  --sage: #5f735c;
+  --champagne: #c4a574;
+  --brand: #5f735c;
   --brand-foreground: #ffffff;
-  --card: #f4f7f2;
-  --card-foreground: #1c2a20;
-  --popover: #f4f7f2;
-  --popover-foreground: #1c2a20;
-  --primary: #4a8f43;
+  --card: #f8f6f2;
+  --card-foreground: #1a1614;
+  --popover: #f8f6f2;
+  --popover-foreground: #1a1614;
+  --primary: #5f735c;
   --primary-foreground: #ffffff;
-  --secondary: #1a2e22;
-  --secondary-foreground: #e9efe8;
-  --muted: #d5e0d3;
-  --muted-foreground: #4a5c4e;
-  --accent: #dce8d9;
-  --accent-foreground: #1c2a20;
+  --secondary: #1a1614;
+  --secondary-foreground: #f1efeb;
+  --muted: #e4e0d8;
+  --muted-foreground: #5a534c;
+  --accent: #ebe6dc;
+  --accent-foreground: #1a1614;
   --destructive: #b42318;
-  --border: #b7c9b4;
-  --input: #b7c9b4;
-  --ring: #4a8f43;
+  --border: #d2cbc0;
+  --input: #d2cbc0;
+  --ring: #c4a574;
   --radius: 0.5rem;
-  --chart-1: #4a8f43;
-  --chart-2: #1a2e22;
-  --chart-3: #6aad62;
-  --chart-4: #5a6b5c;
-  --chart-5: #8aa68a;
-  --sidebar: #f4f7f2;
-  --sidebar-foreground: #1c2a20;
-  --sidebar-primary: #4a8f43;
+  --chart-1: #5f735c;
+  --chart-2: #1a1614;
+  --chart-3: #c4a574;
+  --chart-4: #7a7168;
+  --chart-5: #a89b88;
+  --sidebar: #f8f6f2;
+  --sidebar-foreground: #1a1614;
+  --sidebar-primary: #5f735c;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #dce8d9;
-  --sidebar-accent-foreground: #1c2a20;
-  --sidebar-border: #b7c9b4;
-  --sidebar-ring: #4a8f43;
+  --sidebar-accent: #ebe6dc;
+  --sidebar-accent-foreground: #1a1614;
+  --sidebar-border: #d2cbc0;
+  --sidebar-ring: #c4a574;
 }
 
 @layer base {
@@ -108,14 +108,14 @@
   body {
     @apply bg-background text-foreground antialiased;
     background-image:
-      radial-gradient(ellipse 120% 80% at 0% 0%, rgba(74, 143, 67, 0.08), transparent 55%),
-      radial-gradient(ellipse 90% 60% at 100% 8%, rgba(26, 46, 34, 0.06), transparent 50%),
-      linear-gradient(180deg, #f0f4ee 0%, #e9efe8 45%, #e2ebe0 100%);
+      radial-gradient(ellipse 110% 70% at 0% 0%, rgba(196, 165, 116, 0.1), transparent 55%),
+      radial-gradient(ellipse 90% 55% at 100% 0%, rgba(95, 115, 92, 0.07), transparent 50%),
+      linear-gradient(180deg, #f6f4f0 0%, #f1efeb 50%, #ebe7e0 100%);
     background-attachment: fixed;
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--sage) 35%, transparent);
+    background: color-mix(in srgb, var(--champagne) 40%, transparent);
     color: var(--ink);
   }
 }

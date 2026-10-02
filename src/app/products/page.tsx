@@ -19,25 +19,25 @@ export default function ProductsPage() {
       <main className="flex flex-1 flex-col">
         <PageHero
           title="Featured products"
-          lede="Professional lines we trust for color, care, and finish - ask your stylist what fits your hair."
-          // Focal: product shelves
+          lede="The lines we trust to keep salon shine, color, and softness looking classy at home."
+          // Focal: glossy hair finish / brush detail
           image={{
-            src: "/images/products/davines-shelf.jpg",
-            alt: "Davines and salon product shelves",
-            width: 2560,
-            height: 1440,
+            src: "/images/heroes/finish-beauty.jpg",
+            alt: "Silky finished hair receiving a final brush",
+            width: 1280,
+            height: 720,
             focalX: 0.55,
-            focalY: 0.45,
+            focalY: 0.48,
             fillFrame: true,
             bleed: true,
-            subject: { l: 0.15, t: 0.2, r: 0.95, b: 0.85 },
+            subject: { l: 0.2, t: 0.15, r: 0.95, b: 0.9 },
           }}
           actions={
             <Button
               nativeButton={false}
               render={<a href={site.phoneHref} />}
               size="lg"
-              className="h-11 rounded-md bg-leaf px-5 text-sm font-semibold text-ink hover:bg-leaf/90"
+              className="h-11 rounded-md bg-champagne px-5 text-sm font-semibold text-ink hover:bg-champagne/90"
             >
               Call about products
             </Button>
